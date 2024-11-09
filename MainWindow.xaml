@@ -4,9 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KoloskovApteka"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" MinHeight="500" MinWidth="700"
+        Title="AptekaApp" Height="450" Width="800" FontFamily="Calibri" Icon="res/logo3.png">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="75"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Background="#FF97D4A6"/>
+        <Border Grid.Row="2" Background="#FF97D4A6" />
+        <Image Source="res/logo3.png" HorizontalAlignment="Left"></Image>
         
+        <TextBlock Text="Аптека" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+        <Frame Grid.Row="1" Name="MainFrame" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
+        <Button Content="Назад" Name="BtnBack"  HorizontalAlignment="Right" Click="BtnBack_Click"></Button>
     </Grid>
 </Window>

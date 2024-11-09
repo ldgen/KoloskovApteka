@@ -1,0 +1,53 @@
+﻿<Page x:Class="KoloskovApteka.AddEditPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:KoloskovApteka"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditPage" FontFamily="Calibri" Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Название" FontSize="20" Width="100"/>
+            <TextBox Text="{Binding Name}" FontSize="20" Width="150"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Тип" FontSize="20" Width="100"/>
+            <TextBox Text="{Binding Type}" FontSize="20" Width="150"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Вид" FontSize="20" Width="100"/>
+            <TextBox Text="{Binding Kind}" FontSize="20" Width="150"/>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Цена" FontSize="20" Width="100"/>
+            <TextBox Text="{Binding Price}" FontSize="20" Width="150"/>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.RowSpan="4" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Изображение" FontSize="20" HorizontalAlignment="Center"></TextBlock>
+            <Image Name="LogoImage" Stretch="Uniform" MinHeight="50" Height="150" Width="200" HorizontalAlignment="Center">
+                <Image.Source>
+                    <Binding Path="MedicineImagePath"/>
+                </Image.Source>
+            </Image>
+            <Button Content="Изменить" Name="ChangePictureBtn" Click="ChangePictureBtn_Click"></Button>
+        </StackPanel>
+        
+        <Button Content="Сохранить" Name="SaveBtn" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Click="SaveBtn_Click"/>
+        <Button Content="Удалить" Name="DelBtn" Grid.Column="1" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Click="DelBtn_Click"/>
+    </Grid>
+</Page>
