@@ -61,7 +61,7 @@
                                 <Binding Path="MedicineImagePath">
                                     <Binding.TargetNullValue>
                                         <ImageSource>
-                                            res/picture.png
+                                            ../medicine_res/picture.png
                                         </ImageSource>
                                     </Binding.TargetNullValue>
                                 </Binding>

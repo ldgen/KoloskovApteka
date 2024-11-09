@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KoloskovApteka
+namespace KoloskovApteka.DataBase
 {
     using System;
     using System.Data.Entity;
@@ -18,9 +18,8 @@ namespace KoloskovApteka
         private static AptekaEntities _context;
         public static AptekaEntities GetContext()
         {
-            if (_context == null)
+            if(_context == null )
                 _context = new AptekaEntities();
-
             return _context;
         }
         public AptekaEntities()

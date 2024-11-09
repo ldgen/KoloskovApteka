@@ -64,34 +64,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddEditPage.xaml.cs">
+    <Compile Include="View\AddEditPage.xaml.cs">
       <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="AptekaModel.cs">
+    <Compile Include="DataBase\AptekaModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AptekaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs">
+    <Compile Include="DataBase\Customer.cs">
       <DependentUpon>AptekaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Medicine.cs">
+    <Compile Include="DataBase\Medicine.cs">
       <DependentUpon>AptekaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="MedicinePrescription.cs">
+    <Compile Include="DataBase\MedicinePrescription.cs">
       <DependentUpon>AptekaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="MedicineSale.cs">
+    <Compile Include="DataBase\MedicineSale.cs">
       <DependentUpon>AptekaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Seller.cs">
+    <Compile Include="DataBase\Seller.cs">
       <DependentUpon>AptekaModel.tt</DependentUpon>
     </Compile>
-    <Page Include="AddEditPage.xaml">
+    <Page Include="View\AddEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="View\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -99,28 +99,28 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AptekaModel.Context.cs">
+    <Compile Include="DataBase\AptekaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AptekaModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="AptekaModel.Designer.cs">
+    <Compile Include="DataBase\AptekaModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AptekaModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MedicinePage.xaml">
+    <Page Include="View\MedicinePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Manager.cs" />
-    <Compile Include="MedicinePage.xaml.cs">
+    <Compile Include="View\MedicinePage.xaml.cs">
       <DependentUpon>MedicinePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -140,11 +140,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="AptekaModel.edmx">
+    <EntityDeploy Include="DataBase\AptekaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>AptekaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="AptekaModel.edmx.diagram">
+    <None Include="DataBase\AptekaModel.edmx.diagram">
       <DependentUpon>AptekaModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -157,7 +157,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\picture.png" />
+    <Resource Include="medicine_res\picture.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="res\logo1.png" />
@@ -179,12 +179,12 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AptekaModel.Context.tt">
+    <Content Include="DataBase\AptekaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AptekaModel.edmx</DependentUpon>
       <LastGenOutput>AptekaModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="AptekaModel.tt">
+    <Content Include="DataBase\AptekaModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>AptekaModel.edmx</DependentUpon>
       <LastGenOutput>AptekaModel.cs</LastGenOutput>

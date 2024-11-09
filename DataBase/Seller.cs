@@ -7,28 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KoloskovApteka
+namespace KoloskovApteka.DataBase
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Customer
+    public partial class Seller
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Customer()
+        public Seller()
         {
-            this.MedicinePrescription = new HashSet<MedicinePrescription>();
+            this.MedicineSale = new HashSet<MedicineSale>();
         }
     
-        public int CustomerID { get; set; }
+        public int SellerID { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
         public string Patronymic { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public string PhoneNumber { get; set; }
+        public System.DateTime DateOfAdmission { get; set; }
+        public System.DateTime BirthDate { get; set; }
+        public string Education { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<MedicinePrescription> MedicinePrescription { get; set; }
+        public virtual ICollection<MedicineSale> MedicineSale { get; set; }
     }
 }
