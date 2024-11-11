@@ -30,6 +30,7 @@ namespace KoloskovApteka
 
             ComboSort.SelectedIndex = 0;
             ComboFilt.SelectedIndex = 0;
+            ComboFiltSecond.SelectedIndex = 0;
 
             Update();
         }
@@ -45,6 +46,23 @@ namespace KoloskovApteka
             if (ComboFilt.SelectedIndex == 2)
             {
                 currentMedicine = currentMedicine.Where(p => p.Type == "Изготовляемое").ToList();
+            }
+
+            if (ComboFiltSecond.SelectedIndex == 1)
+            {
+                currentMedicine = currentMedicine.Where(p => p.Kind == "Порошковый").ToList();
+            }
+            if (ComboFiltSecond.SelectedIndex == 2)
+            {
+                currentMedicine = currentMedicine.Where(p => p.Kind == "Капсульный").ToList();
+            }
+            if (ComboFiltSecond.SelectedIndex == 3)
+            {
+                currentMedicine = currentMedicine.Where(p => p.Kind == "Свечи").ToList();
+            }
+            if (ComboFiltSecond.SelectedIndex == 4)
+            {
+                currentMedicine = currentMedicine.Where(p => p.Kind == "Мазь").ToList();
             }
 
             currentMedicine = currentMedicine.Where(p => p.Name.ToLower().Contains(TBoxSearch.Text.ToLower())).ToList();
@@ -96,6 +114,11 @@ namespace KoloskovApteka
                 AptekaEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
                 MedicineListView.ItemsSource = AptekaEntities.GetContext().Medicine.ToList();
             }
+            Update();
+        }
+
+        private void ComboFiltSecond_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
             Update();
         }
     }

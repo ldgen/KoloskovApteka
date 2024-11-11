@@ -19,14 +19,24 @@
         <WrapPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="0">
             <StackPanel Margin="5" Orientation="Horizontal">
                 <TextBox Name="TBoxSearch" TextChanged="TBoxSearch_TextChanged"
-                 Width="200" FontSize="15"></TextBox>
+                 Width="150" FontSize="15"></TextBox>
             </StackPanel>
             <StackPanel Margin="5" Orientation="Horizontal">
                 <ComboBox Name="ComboFilt" SelectionChanged="ComboFilt_SelectionChanged"
-                  FontSize="15" Width="200">
-                    <TextBlock>Все диапазоны</TextBlock>
+                  FontSize="15" Width="150">
+                    <TextBlock>Все типы</TextBlock>
                     <TextBlock>Готовые</TextBlock>
                     <TextBlock>Изготовляемые</TextBlock>
+                </ComboBox>
+            </StackPanel>
+            <StackPanel Margin="5" Orientation="Horizontal">
+                <ComboBox Name="ComboFiltSecond" SelectionChanged="ComboFiltSecond_SelectionChanged"
+                          FontSize="15" Width="150">
+                    <TextBlock>Все виды</TextBlock>
+                    <TextBlock>Порошковый</TextBlock>
+                    <TextBlock>Капсульный</TextBlock>
+                    <TextBlock>Свечи</TextBlock>
+                    <TextBlock>Мазь</TextBlock>
                 </ComboBox>
             </StackPanel>
             <StackPanel Margin="5" Orientation="Horizontal">
